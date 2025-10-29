@@ -9,7 +9,6 @@ from functools import partial
 from einops import rearrange
 import numpy as np
 import torch
-from PIL import Image
 
 import torch.distributed as dist
 from peft import set_peft_model_state_dict
@@ -278,9 +277,7 @@ class WanAnimate:
         face_idxs = list(range(face_len))
         face_images = face_video_reader.get_batch(face_idxs).asnumpy()
         height, width = cond_images[0].shape[:2]
-        pil_img = Image.open(src_ref_path)
-        refer_image = np.array(pil_img)
-        refer_images = refer_image[..., ::-1]
+        refer_images = cv2.imread(src_ref_path)[..., ::-1]
         refer_images = self.padding_resize(refer_images, height=height, width=width)
         return cond_images, face_images, refer_images
     
