@@ -282,6 +282,7 @@ class WanAnimate:
         print(Image.open(src_ref_path).mode)
         print(cv2.getBuildInformation())
         # pil_img = Image.open(src_ref_path)
+        # pil_img = pil_img.convert('RGB')
         # refer_image = np.array(pil_img)
         # refer_images = refer_image
         refer_images = cv2.imread(src_ref_path)[..., ::-1]
