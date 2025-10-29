@@ -281,6 +281,9 @@ class WanAnimate:
         print("Exists:", os.path.exists(src_ref_path))
         print(Image.open(src_ref_path).mode)
         print(cv2.getBuildInformation())
+        # pil_img = Image.open(src_ref_path)
+        # refer_image = np.array(pil_img)
+        # refer_images = refer_image
         refer_images = cv2.imread(src_ref_path)[..., ::-1]
         refer_images = self.padding_resize(refer_images, height=height, width=width)
         return cond_images, face_images, refer_images
