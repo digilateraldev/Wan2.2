@@ -33,8 +33,8 @@ animate_14B.motion_encoder_dim = 512
 
 # inference
 animate_14B.sample_shift = 5.0
-animate_14B.sample_steps = 20
+animate_14B.sample_steps = 25
 animate_14B.sample_guide_scale = 1.0
 animate_14B.frame_num = 77
-animate_14B.sample_fps = 30
+animate_14B.sample_fps = 25
 animate_14B.prompt = '视频中的人在做动作'
