@@ -41,7 +41,7 @@ def _parse_args():
     parser.add_argument(
         "--fps",
         type=int,
-        default=30,
+        default=-1,
         help="The target FPS for processing the driving video. Set to -1 to use the video's original FPS."
     )
 
