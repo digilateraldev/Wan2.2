@@ -14,7 +14,7 @@ timestamp_str = now.strftime("%Y%m%d-%H%M%S")
 processing_dir = f"./wan/process_results_{timestamp_str}"
 parser = argparse.ArgumentParser(description="Generate animation from a video and image using the Wan 2.2 animate")
 parser.add_argument('input_image_path',type=str, help="Path to the input photo file." )
-parser.add_argument('input_video_path'type=str, help="Path to the input video file.")
+parser.add_argument('input_video_path',type=str, help="Path to the input video file.")
 args=parser.parse_args()
 # args.input_image_path
 img=Image.open(args.input_image_path)
