@@ -8,3 +8,6 @@ loguru
 sentencepiece
 librosa
 moviepy
+uvicorn
+fastapi
+requests
