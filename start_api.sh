@@ -1,3 +1,4 @@
+#!/bin/bash
 mkdir -p /workspace/logs /etc/supervisor/conf.d
 cat >/etc/supervisor/conf.d/fastapi.conf <<'EOF'
 [program:fastapi]
